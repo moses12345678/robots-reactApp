@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import './index.css';
 import App from './containers/App'
 import 'tachyons'
 import {robots} from './robots'
 import reportWebVitals from './reportWebVitals';
 
-ReactDom.render(
-  <React.StrictMode>
-    <App />  
-  </React.StrictMode>,
-  document.getElementById('root')
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
+    <App />
 );
 
 // If you want to start measuring performance in your app, pass a function
